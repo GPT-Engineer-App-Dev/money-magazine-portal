@@ -16,10 +16,11 @@ const Home = () => {
       </Heading>
       <SimpleGrid columns={{ base: 1, md: 2, lg: 4 }} spacing={10}>
         {articles.map((article) => (
-          <Box key={article.id} borderWidth={1} borderRadius="lg" overflow="hidden">
+          <Box key={article.id} borderWidth="1px" borderColor="gray.300" borderRadius="lg" overflow="hidden">
             <Image src={article.image} alt={article.title} />
+            <Box borderBottom="1px" borderColor="gray.200" mb={3} />
             <VStack p={4} align="start" spacing={3}>
-              <Heading as="h3" size="md">
+              <Heading as="h3" size="md" color="#0D7680">
                 <Link to={`/article/${article.id}`}>{article.title}</Link>
               </Heading>
               <Text>{article.excerpt}</Text>

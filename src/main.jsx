@@ -9,9 +9,21 @@ const colors = {
     800: "#153e75",
     700: "#2a69ac",
   },
+  background: {
+    default: "#FFF1E5", // Financial Times' background color
+  },
 };
 
-const theme = extendTheme({ colors });
+const theme = extendTheme({
+  colors,
+  styles: {
+    global: {
+      body: {
+        bg: "background.default",
+      },
+    },
+  },
+});
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>

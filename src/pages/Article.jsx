@@ -23,12 +23,13 @@ const Article = () => {
   }
 
   return (
-    <Container maxW="container.lg" py={8}>
-      <Heading as="h1" size="2xl" mb={4}>
+    <Container maxW="container.lg" py={8} bg="white" boxShadow="sm" borderRadius="md">
+      <Heading as="h1" size="2xl" mb={4} color="#0D7680">
         {article.title}
       </Heading>
+      <Box borderBottom="1px" borderColor="gray.300" mb={6} />
       <Image src={article.image} alt={article.title} mb={6} />
-      <Text fontSize="lg" lineHeight="tall">
+      <Text fontSize="lg" lineHeight="tall" color="gray.700">
         {article.content}
       </Text>
     </Container>
